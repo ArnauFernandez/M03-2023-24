@@ -6,5 +6,4 @@ Javier Amaya
 """
 
 num=int(input("dame un numero: "))
-nextnum=num+1
 print("Després ve el ",num+1)
