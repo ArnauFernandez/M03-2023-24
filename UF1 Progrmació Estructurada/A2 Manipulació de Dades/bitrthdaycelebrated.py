@@ -8,5 +8,5 @@ diaAniversari=int(input("introdueix un dia del mes en números: "))
 mesAniversari=int(input("introdueix en numeros "))
 diaActual=int(input("introdueix un dia del mes en números: "))
 mesActual=int(input("introdueix un dia del mes en números: "))
-if diaAniversari == diaActual and mesAniversari >= mesActual:
+if diaAniversari <= diaActual and mesAniversari >= mesActual:
     print("Aniversari Celebrat")
