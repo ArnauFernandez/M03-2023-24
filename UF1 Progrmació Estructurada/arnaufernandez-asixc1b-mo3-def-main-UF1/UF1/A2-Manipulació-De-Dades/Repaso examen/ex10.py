@@ -1,0 +1,10 @@
+prueba1=int(input("Introduce una nota "))
+prueba2=int(input("Introduce una nota "))
+prueba3=int(input("Introduce una nota "))
+examen=int(input("Introduce una nota "))
+trabajo_final=int(input("Introduce una nota "))
+porcentaje_parciales=((prueba1+prueba2+prueba3)*0.55) /3
+porcentaje_examen=(examen*0.3)
+porcentaje_TF=(trabajo_final*0.15)
+nota_final=(porcentaje_parciales+porcentaje_examen+porcentaje_TF)
+print("Tu nota final es",nota_final)
