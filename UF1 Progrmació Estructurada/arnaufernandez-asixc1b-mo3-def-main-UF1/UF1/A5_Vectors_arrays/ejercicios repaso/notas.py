@@ -2,7 +2,6 @@ notas=[]
 for i in range(5):
     PedirNota=int(input("Dame una nota: "))
     if PedirNota>10 or PedirNota<0:
-    
         print("nota no válida")
     else:
         notas.append(PedirNota)
