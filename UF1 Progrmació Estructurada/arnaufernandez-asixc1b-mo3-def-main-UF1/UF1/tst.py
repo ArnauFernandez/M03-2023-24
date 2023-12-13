@@ -19,6 +19,7 @@ try:
         elif pedirnum >= 10000 and pedirnum < 10000:
             print("el numero", pedirnum, "tiene 5 cifras")
         elif pedirnum >10000:
+            print("el numero esta fuera del rango")
             break
 except:
     print("error")
