@@ -8,6 +8,6 @@ try:
             mensualidad =mensualidad*2
         print("El mes", i, "es un mensualidad de", mensualidad)
         total=mensualidad+mensualidad
-    print("El total de los mensualidades es:",total)
+    print("El total de las mensualidades es:",total)
 except:
     print("No es un numero")
