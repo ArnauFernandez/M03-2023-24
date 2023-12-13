@@ -13,8 +13,9 @@ En tot cas, el programa tornarà a mostrar el menú d’opcions,
 tret que l’usuari triï l’opció 5: en aquest cas,
 el programa mostrarà un missatge de comiat i acabarà.
 """
-choice=int(input())
+choice=0
 while choice !=5:
+    choice = int(input())
     if choice ==1:
         print("Literatura")
     elif choice ==2:
@@ -23,4 +24,5 @@ while choice !=5:
         print("Música")
     elif choice == 4:
         print("Videojocs")
-print("no has escollit cap tema adeu")
+    else:
+        print("numero no contemplat introdueix un numero entre 1 i 5")
