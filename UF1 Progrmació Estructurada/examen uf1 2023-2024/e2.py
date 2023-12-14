@@ -1,7 +1,7 @@
 """
 Arnau Fernandez Pinar
 ASIXc M03 UF1 PP1
-Exercici 2: e2.py
+Exercici 2: e3.py
 Crear un programa que sigui capaç de calcular la nota final de la UF3 del mòdul 03
 del Cicle de Grau Superior d'Administració de Sistemes Informàtics en Xarxa (CFGS ASIX).
 El programa només haurà de fer el càlcul per a 1 estudiant, i mostra'ls per pantalla.
