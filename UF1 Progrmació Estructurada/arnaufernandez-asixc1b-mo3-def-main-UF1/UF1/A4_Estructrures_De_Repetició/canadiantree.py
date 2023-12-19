@@ -11,13 +11,13 @@ try:
 
     # Dibuja las ramas del árbol
     for i in range(1, mida_arbre + 1):
-        espais = " " * (mida_arbre - i)
-        fullas = FULLA * (2 * i - 1)
-        print(espais + fullas)
+            espais = " " * (mida_arbre - i)
+            fullas = FULLA * (1 * i - 1)
+            print(espais + fullas)
 
     # Dibuja el tronco del árbol
     for _ in range(mida_arbre // 2):
-        espai_tronc = " " * (mida_arbre - 1)
+        espai_tronc = " " * (mida_arbre-1)
         print(espai_tronc + TRONC)
 
     # Dibuja las decoraciones en el tronco (bolas y estrella)
