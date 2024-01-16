@@ -8,4 +8,4 @@ try:
     dni=int(input(""))
     print(DNILETTER[dni%23])
 except:
-    print("error"
+    print("error")
