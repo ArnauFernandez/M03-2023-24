@@ -16,4 +16,4 @@ frase = input("Introdueix la frase: ")
 frase = frase.lower()
 frase.replace(" ", "")
 for x in frase:
-    print(ord(x) - 97, end=":")
+    print(ord(x), end=".")

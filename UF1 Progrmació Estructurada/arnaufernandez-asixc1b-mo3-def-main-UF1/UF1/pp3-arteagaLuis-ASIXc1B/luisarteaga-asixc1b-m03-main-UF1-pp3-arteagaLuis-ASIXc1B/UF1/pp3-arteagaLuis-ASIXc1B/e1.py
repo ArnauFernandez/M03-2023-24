@@ -12,6 +12,7 @@
             Guardar la matriu a una variable anomenda "matriu".
             Mostrar la matriu resultant per pantalla.
 """
+
 nom_files = (int(input("Quantes files te el quadrat: ")))
 quadrat = nom_files
 for x in range(quadrat):
