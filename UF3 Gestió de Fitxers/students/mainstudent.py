@@ -1,0 +1,2 @@
+from studentsDS import *
+readfile()
