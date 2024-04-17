@@ -1,2 +1,2 @@
 from studentsDS import *
-readfile()
+readfile('student.stats')
