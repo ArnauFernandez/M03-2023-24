@@ -1,5 +1,4 @@
 import os
-
 def readfile(path):
     file=open(path,mode='rt',encoding='utf-8')
     contenido = [int(nota) for nota in file.read().split()]
