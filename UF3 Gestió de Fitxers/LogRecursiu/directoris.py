@@ -27,17 +27,16 @@ def recorrer_arbol_directorios(directorio):
            print("Archivo:", ruta_elemento)
 
 # Función principal
-def log():
-    logFile = os.path.join(log_dir,'app.log')
-    log=open('app.log',mode='w',encoding='utf-8')
-    logFormat = '%(asctime)s %(levelname)s %(message)s'
-    logLevel = logging.DEBUG
-    logMode = 'w'
-    logging.basicConfig(level=logLevel, format=logFormat, filename=logFile, filemode=logMode)
-    logging.debug("Debug message")
-    logging.info("Informative message")
-    logging.error("Error message")
-    logging.warning('Protocol problem: %s', 'connection reset')
+logFile='app.log'
+log=open('app.log',mode='w',encoding='utf-8')
+logFormat = '%(asctime)s %(levelname)s %(message)s'
+logLevel = logging.DEBUG
+logMode = 'w'
+logging.basicConfig(level=logLevel, format=logFormat, filename=logFile, filemode=logMode)
+logging.debug("Debug message")
+logging.info("Informative message")
+logging.error("Error message")
+logging.warning('Protocol problem: %s', 'connection reset')
 def main():
    # Solicitar al usuario el directorio inicial
    directorio_inicial = input("Introduce la ruta del directorio inicial: ")
