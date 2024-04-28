@@ -1,10 +1,12 @@
-def leer_archivo(ruta_archivo):
+def leer_archivo(ruta_archivo, archivo_log):
     """Lee un archivo y devuelve una lista de líneas."""
     try:
         with open(ruta_archivo, "r") as archivo:
             return archivo.readlines()
     except FileNotFoundError:
-        print(f"El archivo {ruta_archivo} no se encontró.")
+        mensaje = f"El archivo {ruta_archivo} no se encontró."
+        print(mensaje)
+        archivo_log.write(mensaje + "\n")
         return []
 
 def contar_vocales(palabra):
@@ -25,30 +27,41 @@ def agregar_cantidad_vocales(lineas):
         lineas_con_vocales.append(nueva_linea)
     return lineas_con_vocales
 
-def escribir_archivo(ruta_archivo, lineas):
+def escribir_archivo(ruta_archivo, lineas, archivo_log):
     """Escribe las líneas en un archivo."""
     try:
         with open(ruta_archivo, "w") as archivo:
             archivo.writelines(lineas)
-        print(f"Se ha creado el archivo {ruta_archivo} satisfactoriamente.")
+        mensaje = f"Se ha creado el archivo {ruta_archivo} satisfactoriamente."
+        print(mensaje)
+        archivo_log.write(mensaje + "\n")
     except Exception as e:
-        print(f"Error al escribir en el archivo {ruta_archivo}: {e}")
+        mensaje = f"Error al escribir en el archivo {ruta_archivo}: {e}"
+        print(mensaje)
+        archivo_log.write(mensaje + "\n")
 
 def maint2():
     """Función principal."""
-    # Leer el archivo original
-    ruta_archivo_original = "paraules.txt"
-    lineas = leer_archivo(ruta_archivo_original)
-    if not lineas:
-        print("No se puede continuar sin datos.")
-        return
+    # Archivo de registro
+    ruta_archivo_log = "registro.log"
+    with open(ruta_archivo_log, "w") as archivo_log:
+        archivo_log.write("Registro de eventos:\n")
 
-    # Agregar la cantidad de vocales a cada palabra
-    lineas_con_vocales = agregar_cantidad_vocales(lineas)
+        # Leer el archivo original
+        ruta_archivo_original = "paraules.txt"
+        lineas = leer_archivo(ruta_archivo_original, archivo_log)
+        if not lineas:
+            mensaje = "No se puede continuar sin datos."
+            print(mensaje)
+            archivo_log.write(mensaje + "\n")
+            return
 
-    # Escribir las líneas en el nuevo archivo
-    ruta_archivo_nuevo = "paraulesQuantitatVocals.txt"
-    escribir_archivo(ruta_archivo_nuevo, lineas_con_vocales)
+        # Agregar la cantidad de vocales a cada palabra
+        lineas_con_vocales = agregar_cantidad_vocales(lineas)
+
+        # Escribir las líneas en el nuevo archivo
+        ruta_archivo_nuevo = "paraulesQuantitatVocals.txt"
+        escribir_archivo(ruta_archivo_nuevo, lineas_con_vocales, archivo_log)
 
 if __name__ == "__main__":
     maint2()
