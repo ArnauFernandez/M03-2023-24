@@ -1,4 +1,13 @@
-for i in range(1,6):
-    for j in range(1,11):
-        print(i*j,"\t",end="")
-    print()
+"""
+Arnau Fernandez Pinar
+ASIXc M04 UF1 A4
+Javier Amaya
+MultiplyTable.py
+"""
+for vuelta in range(1,11):
+    for multiplicar in range(1,11):
+        if (vuelta*multiplicar) %2!=0:
+            print("\t" )
+        print("\t"+str(vuelta*multiplicar),end="")
+
+
