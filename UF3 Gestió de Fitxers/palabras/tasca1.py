@@ -42,7 +42,7 @@ def procesar_palabras(lineas, archivo_log):
 
 def maint1():
     """Función principal."""
-    with open("paraules.txt", "r") as entrada:
+    with open("../test3/paraules.txt", "r") as entrada:
         lineas = entrada.readlines()
 
     with open("registro.log", "a") as archivo_log:
