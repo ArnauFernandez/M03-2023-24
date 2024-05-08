@@ -1,3 +1,5 @@
+import os
+logdir = os.path.join('log', 'paraules.log')
 def leer_archivo(ruta_archivo, archivo_log):
     """Lee un archivo y devuelve una lista de líneas."""
     try:
@@ -43,8 +45,8 @@ def escribir_archivo(ruta_archivo, lineas, archivo_log):
 def maint2():
     """Función principal."""
     # Archivo de registro
-    ruta_archivo_log = "registro.log"
-    with open(ruta_archivo_log, "w") as archivo_log:
+    ruta_archivo_log = logdir
+    with open(ruta_archivo_log, "a") as archivo_log:
         archivo_log.write("Registro de eventos:\n")
 
         # Leer el archivo original
