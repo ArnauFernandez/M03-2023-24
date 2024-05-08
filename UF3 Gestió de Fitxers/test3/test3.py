@@ -2,10 +2,12 @@ import logging
 
 def llegir_paraules(ruta):
     try:
+        logging.info("programa iniciat")
         with open(ruta, 'r', encoding='utf-8') as fitxer:
             paraules = fitxer.readlines()
             paraules = [paraula.strip().lower() for paraula in paraules]
         return paraules
+        logging.info("programa acabat")
     except FileNotFoundError:
         logging.error(f"No s'ha trobat el fitxer {ruta}.")
         return []
@@ -38,5 +40,4 @@ def main():
     paraules = llegir_paraules("paraules.txt")
     escriure_paraules_per_consonant(paraules)
 
-if __name__ == "__main__":
-    main()
+

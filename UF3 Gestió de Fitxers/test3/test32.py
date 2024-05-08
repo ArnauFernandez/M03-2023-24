@@ -12,6 +12,6 @@ def calcular_quantitat_paraules(ruta_entrada, ruta_sortida):
     except Exception as e:
         print(f"S'ha produït un error: {str(e)}")
 
-ruta_entrada = os.path.join('test2','paraules.txt')
-ruta_sortida = os.path.join('test2','paraulesQuantitat.txt')
+ruta_entrada = os.path.join('test3','paraules.txt')
+ruta_sortida = os.path.join('test3','paraulesQuantitat.txt')
 calcular_quantitat_paraules(ruta_entrada, ruta_sortida)
