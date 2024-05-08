@@ -25,12 +25,12 @@ def llegir_paraules(ruta):
         return []
 
 def escriure_paraules_per_vocals(paraules):
-    consonants = 'aeiou'
+    vocals = 'aeiou'
     fitxers = {}
 
     try:
-        for consonant in consonants:
-            fitxers[consonant] = open(f"paraules-{consonant}.txt", 'w', encoding='utf-8')
+        for vocal in vocals:
+            fitxers[vocal] = open(f"paraules-{vocal}.txt", 'w', encoding='utf-8')
 
         for paraula in paraules:
             primera_lletra = paraula[0]
