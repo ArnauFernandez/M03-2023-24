@@ -12,11 +12,9 @@ def escribir_palabras_en_archivo(palabras, longitud):
             for palabra in palabras:
                 salida.write(palabra + "\n")
         mensaje = f"Se ha creado el archivo {nombre_archivo} satisfactoriamente."
-        print(mensaje)
         return mensaje
     except Exception as e:
         mensaje = f"Error al escribir en el archivo {nombre_archivo}: {e}"
-        print(mensaje)
         return mensaje
 
 def procesar_palabras(lineas):

@@ -7,7 +7,6 @@ def leer_archivo(ruta_archivo, archivo_log):
             return archivo.readlines()
     except FileNotFoundError:
         mensaje = f"El archivo {ruta_archivo} no se encontró."
-        print(mensaje)
         archivo_log.write(mensaje + "\n")
         return []
 
@@ -35,7 +34,6 @@ def escribir_archivo(ruta_archivo, lineas, archivo_log):
         with open(ruta_archivo, "w") as archivo:
             archivo.writelines(lineas)
         mensaje = f"Se ha creado el archivo {ruta_archivo} satisfactoriamente."
-        print(mensaje)
         archivo_log.write(mensaje + "\n")
     except Exception as e:
         mensaje = f"Error al escribir en el archivo {ruta_archivo}: {e}"
@@ -54,7 +52,6 @@ def maint2():
         lineas = leer_archivo(ruta_archivo_original, archivo_log)
         if not lineas:
             mensaje = "No se puede continuar sin datos."
-            print(mensaje)
             archivo_log.write(mensaje + "\n")
             return
 
