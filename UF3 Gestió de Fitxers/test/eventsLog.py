@@ -1,10 +1,10 @@
 
-
+import os
 import datetime
-
+logpath=os.path.join('log','paraules.log')
 try:
     def abrir_log():
-        log = open('./log/paraules.log', mode='a', encoding='utf-8')
+        log = open(logpath, mode='a', encoding='utf-8')
         return log
 
     data_hora_actual = datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')

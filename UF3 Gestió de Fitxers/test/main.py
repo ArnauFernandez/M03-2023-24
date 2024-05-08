@@ -1,4 +1,4 @@
-
+import os
 import tasques
 import text_InputOutput
 from eventsLog import data_hora_actual
@@ -8,8 +8,8 @@ def main():
     try:
         log = abrir_log()
         log.write(data_hora_actual + ' ' + events["accions"]["programaIniciat"] + '\n')
-        RUTAORIGEN = './entrada/paraules.txt'
-        RUTADESTI = './sortida/paraules'
+        RUTAORIGEN =os.path.join('entrada','paraules.txt')
+        RUTADESTI = os.path.join('sortida','paraules.txt')
         text = text_InputOutput.obrir_arxiu(RUTAORIGEN)
         ##TASCA1
         llistaAmbTerminacions = tasques.tasca1(text)
