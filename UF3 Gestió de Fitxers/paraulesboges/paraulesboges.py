@@ -1,3 +1,4 @@
+
 """
 Eric González, Izan Fernandez, Arnau Fernandez.
 08/05/2024
@@ -54,5 +55,3 @@ def main(input_dir, output_dir, log_dir):
 
     except Exception as e:
         logging.error(f"Error durante el procesamiento de archivos: {e}")
-
-

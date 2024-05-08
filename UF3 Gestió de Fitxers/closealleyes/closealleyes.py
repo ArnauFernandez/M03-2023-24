@@ -7,7 +7,7 @@ def replace_eyes(line):
 def process_file(input_file, output_dir):
     """Processes an input file and creates the corresponding output file."""
     output_file = os.path.join(output_dir, os.path.basename(input_file).replace('.in', 'Closed.out'))
-    with open(input_file, 'r') as f_in, open(output_file, 'w') as f_out:
+    with open(input_file, 'r') as f_in, open(output_file, 'w',encoding='utf-8') as f_out:
         for line in f_in:
             f_out.write(replace_eyes(line))
 
