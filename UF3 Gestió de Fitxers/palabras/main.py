@@ -1,4 +1,4 @@
 from tasca1 import *
 from tasca2 import *
-maint1()
+main()
 maint2()

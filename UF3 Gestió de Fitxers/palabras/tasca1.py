@@ -1,4 +1,9 @@
 import os
+import time
+
+ruta_entrada = 'paraules.txt'
+logdir = os.path.join('log', 'paraules.log')
+
 def escribir_palabras_en_archivo(palabras, longitud):
     """Escribe las palabras en un archivo."""
     try:
@@ -14,7 +19,7 @@ def escribir_palabras_en_archivo(palabras, longitud):
         print(mensaje)
         return mensaje
 
-def procesar_palabras(lineas, archivo_log):
+def procesar_palabras(lineas):
     """Procesa las palabras y las escribe en archivos según su longitud."""
     palabras_por_longitud = {
         2: [],
@@ -30,24 +35,24 @@ def procesar_palabras(lineas, archivo_log):
         if longitud in palabras_por_longitud:
             palabras_por_longitud[longitud].append(palabra)
 
-    registro = []
     for longitud, palabras in palabras_por_longitud.items():
         if palabras:
-            mensaje = escribir_palabras_en_archivo(palabras, longitud)
-            registro.append(mensaje)
+            escribir_palabras_en_archivo(palabras, longitud)
 
-    if registro:
-        archivo_log.write("\n".join(registro) + "\n")
-        print("Se ha actualizado el archivo de registro.")
-
-def maint1():
+def main():
     """Función principal."""
-    with open("../test3/paraules.txt", "r") as entrada:
-        lineas = entrada.readlines()
+    start_time = time.time()
+    with open(logdir, "a") as archivo_log:
+        archivo_log.write(f"--- Inicio del programa ---\n")
+        with open(ruta_entrada, "r") as entrada:
+            lineas = entrada.readlines()
 
-    with open("registro.log", "a") as archivo_log:
-        archivo_log.write("Registro de eventos:\n")
-        procesar_palabras(lineas, archivo_log)
+        procesar_palabras(lineas)
+
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        archivo_log.write(f"--- Fin del programa ---\n")
+        archivo_log.write(f"Tiempo transcurrido: {elapsed_time:.2f} segundos\n")
 
 if __name__ == "__main__":
-    maint1()
+    main()
