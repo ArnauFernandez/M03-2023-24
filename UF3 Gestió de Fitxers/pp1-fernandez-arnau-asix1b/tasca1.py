@@ -1,3 +1,9 @@
+"""
+Arnau Fernandez Pinar
+ASIXc M03 UF3 PP1
+9/05/2024
+Tasca1.py
+"""
 import os
 import time
 
@@ -5,7 +11,7 @@ ruta_entrada = 'paraules.txt'
 logdir = os.path.join('log', 'paraules.log')
 
 def escribir_palabras_en_archivo(palabras, longitud):
-    """Escribe las palabras en un archivo."""
+    """Escribe las pp1-fernandez-arnau-asix1b en un archivo."""
     try:
         nombre_archivo = f"paraules-{longitud}.txt"
         with open(nombre_archivo, "w") as salida:
@@ -18,7 +24,6 @@ def escribir_palabras_en_archivo(palabras, longitud):
         return mensaje
 
 def procesar_palabras(lineas):
-    """Procesa las palabras y las escribe en archivos según su longitud."""
     palabras_por_longitud = {
         2: [],
         4: [],
@@ -38,7 +43,6 @@ def procesar_palabras(lineas):
             escribir_palabras_en_archivo(palabras, longitud)
 
 def main():
-    """Función principal."""
     start_time = time.time()
     with open(logdir, "a") as archivo_log:
         archivo_log.write(f"--- Inicio del programa ---\n")

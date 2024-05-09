@@ -1,3 +1,9 @@
+"""
+Arnau Fernandez Pinar
+ASIXc M03 UF3 PP1
+9/05/2024
+Tasca2.py
+"""
 import os
 logdir = os.path.join('log', 'paraules.log')
 def leer_archivo(ruta_archivo, archivo_log):
@@ -12,7 +18,7 @@ def leer_archivo(ruta_archivo, archivo_log):
 
 def contar_vocales(palabra):
     """Cuenta la cantidad de vocales en una palabra."""
-    vocales = "aeiouAEIOU"
+    vocales = "aeiouAEIOUáàéèíìóòúùÁÀÉÈÍÌÓÒÚÙ"
     return sum(1 for letra in palabra if letra in vocales)
 
 def agregar_cantidad_vocales(lineas):
