@@ -2,3 +2,18 @@
 2024-05-08 22:28:53,044 - INFO - Inici de la lectura del fitxer
 2024-05-08 22:28:53,046 - INFO - Fi de la lectura del fitxer
 2024-05-08 22:28:53,049 - INFO - Temps d'execució: 0.00 segons
+INFO:root:Inicio del programa
+INFO:root:Fin del programa
+INFO:root:Tiempo de ejecución: 2.00 segundos
+INFO:root:Inicio del programa
+INFO:root:Fin del programa
+INFO:root:Tiempo de ejecución: 2.00 segundos
+2024-05-09 08:18:40,155 - INFO - Inici de la lectura del fitxer
+2024-05-09 08:18:40,157 - INFO - Fi de la lectura del fitxer
+2024-05-09 08:18:40,160 - INFO - Temps d'execució: 0.00 segons
+2024-05-09 08:25:00,389 - INFO - Inici de la lectura del fitxer
+2024-05-09 08:25:00,390 - INFO - Fi de la lectura del fitxer
+2024-05-09 08:25:00,395 - INFO - Temps d'execució: 0.01 segons
+2024-05-09 08:26:50,152 - INFO - Inici de la lectura del fitxer
+2024-05-09 08:26:50,154 - INFO - Fi de la lectura del fitxer
+2024-05-09 08:26:50,157 - INFO - Temps d'execució: 0.00 segons

@@ -15,3 +15,4 @@ def calcular_quantitat_paraules(ruta_entrada, ruta_sortida):
 ruta_entrada = os.path.join('test3','paraules.txt')
 ruta_sortida = os.path.join('test3','paraulesQuantitat.txt')
 calcular_quantitat_paraules(ruta_entrada, ruta_sortida)
+
